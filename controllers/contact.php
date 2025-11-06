@@ -3,6 +3,6 @@
 $heading = "Contact";
 
 
-require "Views/contact.view.php";
+require base_path("Views/contact.view.php");
 
 ?>

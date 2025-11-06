@@ -1,7 +1,7 @@
 <?php
   $heading = "Home";  
   
-        require "Views/index.view.php";
+        require base_path("Views/index.view.php");
        
 
 

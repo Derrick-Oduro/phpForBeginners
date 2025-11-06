@@ -1,5 +1,5 @@
 <?php
-$config = require ('config.php');
+$config = require base_path('config.php');
 $db = new Database($config['database']);
 
 
@@ -7,4 +7,4 @@ $db = new Database($config['database']);
     $notes = $db->query("select * from notes")->fetchAll();
 
 
-    require "Views/notes.view.php";
+    require base_path("Views/notes/index.view.php");

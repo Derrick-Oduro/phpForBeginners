@@ -1,6 +1,6 @@
-<?php require ('Views/Partials/header.php')?>
-    <?php require ('Views/Partials/nav.php');?>
-    <?php require ('Views/Partials/banner.php');?>
+<?php require base_path('Views/Partials/header.php')?>
+    <?php require base_path('Views/Partials/nav.php');?>
+    <?php require base_path('Views/Partials/banner.php');?>
 
   <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -17,9 +17,9 @@
                   <div class="col-span-full">
                     <label for="body" class="block text-sm/6 font-medium text-white">body</label>
                     <div class="mt-1">
-                      <textarea id="body" name="body" rows="3" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" placeholder="Enter note body"></textarea>
+                      <textarea id="body" name="body" rows="3" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" placeholder="Enter note body"><?= $_POST['body'] ?? '' ?></textarea>
                       <?php if (isset($errors['body'])): ?>
-                        <p><?= $errors['body'] ?></p>
+                        <p class="mt-1 text-red-500"><?= $errors['body'] ?></p>
                       <?php endif; ?>
                         
                     </div>
@@ -40,4 +40,4 @@
         </div>
 
   </main>
-<?php require ('Views/Partials/footer.php') ?>
+<?php require base_path('Views/Partials/footer.php') ?>
